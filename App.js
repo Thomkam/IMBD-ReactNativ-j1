@@ -16,9 +16,9 @@ import {
 
 const App = () => {
   return (
-    <View style={{ backgroundColor: "#212121" }}>
-      {/*       <StatusBar style="auto" />
-       */}
+    <View style={{ backgroundColor: "#212121", marginTop: 25 }}>
+      <StatusBar style="auto" />
+
       <View style={{ backgroundColor: "#393939" }}>
         <Image
           source={{
@@ -30,7 +30,6 @@ const App = () => {
             backgroundColor: "black",
             padding: 10,
             margin: 10,
-            border: "white",
           }}
         />
       </View>
@@ -48,7 +47,7 @@ const App = () => {
           style={styles.cover}
           resizeMode="contain"
         />
-        <Text style={{ color: "white" }}>
+        <Text style={{ color: "white", margin: 20, flex: 1 }}>
           A team of explorers travel through a wormhole in space in an attempt
           to ensure humanity's survival.
           <TouchableOpacity
@@ -58,7 +57,9 @@ const App = () => {
               console.log("pressed !");
             }}
           >
-            <Text style={styles1.btnText}>+ ADD TO WATCHLIST</Text>
+            <Text style={{ color: "white", fontSize: 20 }}>
+              + ADD TO WATCHLIST
+            </Text>
           </TouchableOpacity>
         </Text>
       </View>
@@ -70,81 +71,85 @@ const App = () => {
         <Text style={{ color: "white", fontSize: 25 }}>Top Billed Cast</Text>
       </View>
       <View style={{ flexDirection: "row" }}>
-        <View>
-          <Image
-            source={require("./assets/matthew.jpg")}
-            style={styles2.cover}
-            resizeMode="contain"
-          />
-          <Text
-            style={{
-              color: "white",
-              backgroundColor: "#2A2A2A",
-              marginLeft: 15,
-            }}
-          >
-            Matthew McCon...
-          </Text>
-          <Text
-            style={{
-              color: "#B0B0B0",
-              backgroundColor: "#2A2A2A",
-              marginLeft: 15,
-            }}
-          >
-            Cooper
-          </Text>
-        </View>
-        <View>
-          <Image
-            source={require("./assets/anne.jpg")}
-            style={styles2.cover}
-            resizeMode="contain"
-          />
-          <Text
-            style={{
-              color: "white",
-              backgroundColor: "#2A2A2A",
-              marginLeft: 15,
-            }}
-          >
-            Anne Hathaway
-          </Text>
-          <Text
-            style={{
-              color: "#B0B0B0",
-              backgroundColor: "#2A2A2A",
-              marginLeft: 15,
-            }}
-          >
-            Brand
-          </Text>
-        </View>
-        <View>
-          <Image
-            source={require("./assets/jessica.jpg")}
-            style={styles2.cover}
-            resizeMode="contain"
-          />
-          <Text
-            style={{
-              color: "white",
-              backgroundColor: "#2A2A2A",
-              marginLeft: 15,
-            }}
-          >
-            Jessica Chanan
-          </Text>
-          <Text
-            style={{
-              color: "#B0B0B0",
-              backgroundColor: "#2A2A2A",
-              marginLeft: 15,
-            }}
-          >
-            Murph
-          </Text>
-        </View>
+        <ScrollView horizontal={true}>
+          <View>
+            <Image
+              source={require("./assets/matthew.jpg")}
+              style={styles2.cover}
+              resizeMode="contain"
+            />
+            <Text
+              numberOfLines={1}
+              ellipsizeMode="tail"
+              style={{
+                color: "white",
+                backgroundColor: "#2A2A2A",
+                marginLeft: 15,
+              }}
+            >
+              Matthew McConawhaiteuuuuu
+            </Text>
+            <Text
+              style={{
+                color: "#B0B0B0",
+                backgroundColor: "#2A2A2A",
+                marginLeft: 15,
+              }}
+            >
+              Cooper
+            </Text>
+          </View>
+          <View>
+            <Image
+              source={require("./assets/anne.jpg")}
+              style={styles2.cover}
+              resizeMode="contain"
+            />
+            <Text
+              style={{
+                color: "white",
+                backgroundColor: "#2A2A2A",
+                marginLeft: 15,
+              }}
+            >
+              Anne Hathaway
+            </Text>
+            <Text
+              style={{
+                color: "#B0B0B0",
+                backgroundColor: "#2A2A2A",
+                marginLeft: 15,
+              }}
+            >
+              Brand
+            </Text>
+          </View>
+          <View>
+            <Image
+              source={require("./assets/jessica.jpg")}
+              style={styles2.cover}
+              resizeMode="contain"
+            />
+            <Text
+              style={{
+                color: "white",
+                backgroundColor: "#2A2A2A",
+                marginLeft: 15,
+              }}
+            >
+              Jessica Chanan
+            </Text>
+            <Text
+              style={{
+                color: "#B0B0B0",
+                backgroundColor: "#2A2A2A",
+                marginLeft: 15,
+              }}
+            >
+              Murph
+            </Text>
+          </View>
+        </ScrollView>
       </View>
 
       {/* ::::::::::::::::::::::::::::::::::::::::::::
@@ -192,15 +197,14 @@ const styles = StyleSheet.create({
 const styles1 = StyleSheet.create({
   btn: {
     backgroundColor: "#0277BD",
-    marginTop: 100,
+    marginTop: 10,
     width: 220,
     height: 40,
     alignItems: "center",
     padding: 20,
     borderRadius: 5,
-    marginTop: 20,
   },
-  btnText: { color: "white", fontSize: 10 },
+  btnText: { color: "white", fontSize: 20 },
 });
 
 const styles2 = StyleSheet.create({
